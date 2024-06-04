@@ -1,0 +1,202 @@
+:root {
+    --color-1: #040711;
+    --color-2: #394150;
+    --color-3: #4D5562;
+    --color-4: #CDD5E0;
+    --color-5: #F9FAFB;
+    --color-6: #3662E3;
+    --color-7: #7CA9F3;
+    --color-8: #212936cc;
+    --color-9: #121826cc;
+    --font: font0
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: font0;
+    src: url("./fonts/DM_Sans/DMSans-VariableFont_opsz\,wght.ttf");
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url("./imgs/hero_img.jpg");
+    background-size: cover;
+    background-position: 80%;
+}
+button{
+    background:none;
+    outline: none;
+}
+
+.container-fluid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+}
+
+.input-card,.output-card {
+    height: 110%;
+    margin-right: 15px;
+    width: 35%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 25px;
+    padding-left: 1%;
+    padding-right: 1%;
+    border: 2px solid var(--color-3);
+}
+
+.input-card {
+    background-color: var(--color-8);
+    
+}
+
+.menu-card1,.menu-card2{
+    padding-top: 10px;
+}
+
+.menu-card1,.menu-card2 div {
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.menu-card2{
+    display:flex;
+    justify-content: space-between;
+}
+
+.menu-card1 button, .menu-card2 button {
+    font-family: var(--font);
+    font-size: 90%;
+    font-weight: bold;
+    padding: 1.3% 3%;
+    border-radius: 10px;
+    background: none;
+    border: none;
+    color: #636e80;
+    transition: color .5s;
+}
+
+.menu-card1 button:hover,.menu-card2 button:hover {
+    background-color: var(--color-3);
+    color: var(--color-4);
+}
+
+
+
+.input-card textarea,.output-card textarea {
+    height: 160px;
+    color: var(--color-5);
+    padding: 2%;
+    font-size: 120%;
+    outline: none;
+    border: none;
+    border-top: 3px solid var(--color-3);
+    background-color: var(--color-8)
+}
+
+.footer-card1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.footer-card1 div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.translate{
+    transition: all .3s;
+    font-size: 100%;
+    background-color: var(--color-6);
+    color: var(--color-4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 20px;
+    padding:5px;
+    border: 2px solid var(--color-4);
+}
+.translate:hover{
+    background-color: var(--color-7);
+    color: var(--color-5);
+}
+.footer-card1 .input_sound, .footer-card2 .output_sound,.menu-card2 img{
+    transition: background-color .3s;
+    border:2px solid var(--color-3);
+    border-radius: 40%;
+    padding: 5px;
+    margin-right: 17%;
+}
+.menu-card2 button{
+    margin-right: 10%;
+}
+.menu-card2 img{
+    margin-right: 2%;
+    margin-bottom: 2%;
+}
+.invert{
+    height: 70%;
+}
+
+.output-card {
+    background-color: var(--color-9);
+}
+.output-card textarea{
+    background-color: var(--color-9);
+}
+
+.footer-card2 {
+    display: flex;
+    justify-content: flex-start;
+    align-items: end;
+}
+.footer-card2 .output_sound{
+margin-right: 2%;
+}
+
+.input_sound:hover,.output_sound:hover,.menu-card2 img:hover{
+background-color: var(--color-4);
+}
+button.active{
+    background: var(--color-3);
+    background-color: var(--color-3) ;
+    color: #040711;
+}
+.activate{ 
+    background-color: var(--color-4);
+}
+
+@media(max-width:758px) {
+    .container-fluid{
+        flex-direction: column;
+        justify-content: flex-start;
+        margin-top: 19px;
+        flex-grow: 1 1;
+    }
+    html{
+        overflow: hidden;
+    }
+    .input-card{
+        margin-bottom: 1%;
+    }
+    .input-card, .output-card{
+        width: 80%;
+        height: 46%;
+    }
+
+}
+
